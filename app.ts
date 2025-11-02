@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import cors from "cors";
 import mongoose from "mongoose";
 import petRouter from "./router/pet";
+import breedRouter from "./router/breed";
 import IO from "./socket-io";
 const app = express();
 dotenv.config();
@@ -15,6 +16,8 @@ app.use(
 app.use(express.json());
 // pet
 app.use(petRouter);
+// breed
+app.use(breedRouter);
 
 const url = process.env.DATABASE_URL as string;
 mongoose

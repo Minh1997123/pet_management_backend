@@ -10,4 +10,15 @@ export type typePet = {
   dewormed: boolean;
   sterilized: boolean;
   dateAdd: string;
+  id?: string;
+  _id?: string;
+};
+
+export type typeSearchPet = {
+  name: string;
+  type: string;
+  breed: string;
+  vaccinated: boolean;
+  dewormed: boolean;
+  sterilized: boolean;
 };
